@@ -49,10 +49,10 @@ result.innerHTML = "я знаю технологии такие как " + text1
 // Можно обратить напрямую к тегу, а не по классу или id.
 html = document.documentElement;
 head = document.head;
-body = document.body;
+// body = document.body;
 console.log(html); //весь тег html со всем его содержимым.
 console.log(head); //весь тег head со всем его содержимым.
-console.log(body); //весь тег body со всем его содержимым.
+// console.log(body); //весь тег body со всем его содержимым.
 
 // chilNodes коллекция потомков.
 // childNodes НЕ МАССИВ ! МЕТОДЫ МАССИВА РАБОТАТЬ НЕ БУДУТ !
@@ -86,3 +86,13 @@ console.log(lastEl); //script
 let firstElem = document.getElementById("ul").firstChild; //#text
 // Выводит текстовый узел #text.
 console.log(firstElem);
+
+// Соседи
+// Соседи это узлы, у которых один и тот же родитель.
+// Метод parentNode поможет нам дотянуться от дочернего элемента к родителю.
+// Метод nextSibling / previousSibling поможет нам дотянуться до соседа справа, и соседа слева соответственно.
+let body = document.body;
+console.log(body.children); //все children которые есть у body (без текстовых узлов);
+let results = document.getElementById("result");
+console.log(results.parentNode); //общий родитель body.
+
