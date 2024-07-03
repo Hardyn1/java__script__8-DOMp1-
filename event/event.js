@@ -4,7 +4,7 @@
 // Одни события генерируются браузером, другие при взаимодействия пользователя со страницей.
 // РАБОТА С АТРИБУТАМИ.
 let btn = document.getElementById("btn");
-    div = document.getElementById("div");
+div = document.getElementById("div");
 // свойство btn.type !
 console.log(btn.type); //button а type для div является стандартным.
 console.log(div.type); //undefined type не является стандартным тегом для div.
@@ -38,3 +38,23 @@ let elt = document.getElementById("p");
 elt.removeAttribute("id");
 console.log(elt); //<p>P</p>
 
+// ОБРАБОТЧИКИ СОБЫТИЙ В JS.
+// 1 Обработчик - onclick.
+// On стандартное начало название обработчика / click уже конкретное название обработки которое происходит.
+//<button onclick="alert(`ты начал на кнопку`)">click</button>
+// можно и console.log() вместо alert.
+// при обработчики onclick будет всплывать через alert `ты нажал на кнопку`
+// вместо действия alert можно использовать функцию foo().
+let btq = document.getElementById("btn");
+function foo() {
+    // можно и с вычислениями.
+    let num1 = 100;
+    num2 = 200;
+    console.log(num1 + num2);
+    alert("ты нажал на кнопку");
+};
+// Можно функцию вызвать еще таким способом.
+// По клику на эту кнопку мы вызываем функцию foo.
+// btn.onclick = foo;
+// В html из button если убрать onclick="foo()", то сработает.
+// Приоритетнее будет срабатывать функция из js.
